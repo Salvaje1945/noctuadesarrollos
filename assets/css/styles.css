@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+.flex-1, #contenedor #cabecera .cabecera__contenido,
+.flex-2,
+.flex-3,
+.flex-4,
+.flex-5,
+.flex-6,
+.flex-7,
+.flex-8,
+.flex-9,
+.flex-10,
+.flex-11,
+.flex-12 {
+  display: flex;
+}
+
+.flex-1, #contenedor #cabecera .cabecera__contenido,
+.flex-2,
+.flex-3,
+.flex-4,
+.flex-5,
+.flex-6,
+.flex-9,
+.flex-12 {
+  flex-flow: row nowrap;
+}
+
+.flex-10,
+.flex-11 {
+  flex-flow: row wrap;
+}
+
+.flex-7,
+.flex-8 {
+  flex-flow: column nowrap;
+}
+
+.flex-1, #contenedor #cabecera .cabecera__contenido,
+.flex-3,
+.flex-5,
+.flex-6,
+.flex-7,
+.flex-8,
+.flex-10 {
+  align-items: center;
+}
+
+.flex-1, #contenedor #cabecera .cabecera__contenido,
+.flex-4,
+.flex-8,
+.flex-11,
+.flex-12 {
+  justify-content: space-between;
+}
+
+.flex-2,
+.flex-9,
+.flex-11,
+.flex-12 {
+  align-items: flex-start;
+}
+
+.flex-4 {
+  align-items: flex-end;
+}
+
+.flex-5,
+.flex-9 {
+  justify-content: space-around;
+}
+
+.flex-7 {
+  justify-content: center;
+}
+
+.flex-6,
+.flex-10 {
+  justify-content: flex-start;
+}
+
+/*.flex-8 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}*/
+.cabeza__extremos {
+  display: inline-block;
+  padding: 7px;
+}
+
+.scroll_horiz {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+.scroll_horiz::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+:root {
+  font-size: 16px !important;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  font-style: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s !important;
+  transition: background-color 600000s 0s, color 600000s 0s !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#contenedor {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "cabecera" "contenido" "pie";
+}
+#contenedor #cabecera,
+#contenedor #contenido,
+#contenedor #pie {
+  display: block;
+  width: 100%;
+}
+#contenedor #cabecera {
+  grid-area: cabecera;
+  background-color: #fff;
+  border-bottom: 1px solid #aaa;
+  padding: 0 5vw;
+}
+#contenedor #contenido {
+  grid-area: contenido;
+  height: 75svh;
+  background-color: chocolate;
+}
+#contenedor #pie {
+  grid-area: pie;
+  height: 20svh;
+  background-color: #333;
+}
+
+#contenedor #cabecera .cabecera__contenido--menu {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 95svh;
+  background-color: #000;
+  top: 5svh;
+  left: -100%;
+  transition: 0.5s ease all;
+}
+#contenedor #cabecera .cabecera__contenido--menu ul {
+  list-style: none;
+  display: block;
+  width: 100%;
+  padding: 0 5vw;
+  margin: 3svh 0 0;
+}
+#contenedor #cabecera .cabecera__contenido--menu ul li {
+  display: block;
+  padding: 3svh 0;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#contenedor #cabecera .cabecera__contenido--menu ul li a {
+  color: #fff;
+  text-transform: uppercase;
+}
+#contenedor #cabecera .cabecera__contenido--menu ul li a:hover {
+  color: #999;
+}
+#contenedor #cabecera .cabecera__contenido--menu ul li div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#contenedor #cabecera .cabecera__contenido--menu ul li div span {
+  color: #fff;
+  font-size: 2.5rem;
+}
+#contenedor #cabecera .cabecera__contenido--menu.activo {
+  left: 0;
+  transition: 0.3s linear all;
+}
+#contenedor #cabecera .cabecera__contenido {
+  height: 5svh;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--logo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--logo img {
+  display: inline-block;
+  margin: 0 7px 0 0;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--logo .cabecera__contenido--titulo {
+  display: inline-block;
+  height: 24px;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--logo .cabecera__contenido--titulo h1 {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--logo .cabecera__contenido--titulo h1 span {
+  font-family: "Bebas Neue", cursive;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--btn {
+  display: none;
+  font-size: 1.5rem;
+  color: #000;
+  height: 24px;
+  transition: 0.3s linear all;
+}
+#contenedor #cabecera .cabecera__contenido .cabecera__contenido--btn.activo {
+  display: inline-block;
+  transition: 0.3s ease all;
+}/*# sourceMappingURL=styles.css.map */
