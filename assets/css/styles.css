@@ -333,6 +333,7 @@ a {
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider .carrousel__slider--slide {
   display: inline-block;
   width: 100%;
+  height: 100%;
 }
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider .carrousel__slider--slide h2 {
   font-family: "Bebas Neue", cursive;
