@@ -340,11 +340,11 @@ a {
   margin-bottom: 7px;
   font-size: 4.5rem;
   text-shadow: 2px 2px #000;
-  line-height: 56px;
+  line-height: 0.79;
 }
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider .carrousel__slider--slide p {
   font-family: "Pathway Gothic One", sans-serif;
-  font-size: 2rem;
+  font-size: 4.5svh;
   text-shadow: 2px 2px #000;
   color: #dedede;
 }

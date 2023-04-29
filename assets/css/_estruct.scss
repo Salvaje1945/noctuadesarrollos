@@ -194,15 +194,16 @@
                         margin-bottom: 7px;
                         font-size: 4.5rem;
                         text-shadow: 2px 2px map-get($color, "negro");
-                        line-height: 56px; 
+                        line-height: 0.79; 
                     }
 
                     p {
                         font-family: $fam_02;
-                        font-size: 2rem;
+                        font-size: 4.5svh;
                         //line-height: 33px;
                         text-shadow: 2px 2px map-get($color, "negro");
                         color: map-get($color, "gris_16");
+                        
                     }
 
                     &:nth-child(1) {
