@@ -188,7 +188,6 @@
                     display: inline-block;
                     width: 100%;
                     height: 100%;
-                    //text-overflow:;
 
                     h2 {
                         font-family: $fam_01;
@@ -200,10 +199,14 @@
 
                     p {
                         font-family: $fam_02;
-                        font-size: 5svh;
+                        font-size: 5.1svh;
+                        //font-size-adjust: 5svh;
+                        //font-size: 3rem;
                         //line-height: 33px;
                         text-shadow: 2px 2px map-get($color, "negro");
                         color: map-get($color, "gris_16");
+                        height: 58svh;
+                        
                         
                     }
 
