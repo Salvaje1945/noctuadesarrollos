@@ -347,7 +347,7 @@ a {
   font-size: 5.1svh;
   text-shadow: 2px 2px #000;
   color: #dedede;
-  height: 58svh;
+  max-height: 58svh;
 }
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider .carrousel__slider--slide:nth-child(1) h2 {
   color: #fb5504;

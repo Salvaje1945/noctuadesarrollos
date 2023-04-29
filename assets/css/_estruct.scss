@@ -205,7 +205,7 @@
                         //line-height: 33px;
                         text-shadow: 2px 2px map-get($color, "negro");
                         color: map-get($color, "gris_16");
-                        height: 58svh;
+                        max-height: 58svh;
                         
                         
                     }
