@@ -267,13 +267,20 @@ a {
   transition: 0.3s ease all;
 }
 #contenedor #contenido .contenido__carrousel {
-  min-height: 614px;
+  height: 614px;
   background-color: #000;
   background-image: url(../img/fondo_cabecera_buho.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
+  padding: 11svh 5vw 0;
+}
+#contenedor #contenido .contenido__carrousel .contenido__carrousel--slider {
+  width: 300%;
+  height: 100%;
+  background-color: chartreuse;
 }
 
 @media only screen and (min-width: 768px) {
