@@ -22,7 +22,6 @@
 
     #cabecera {
         grid-area: cabecera;
-        //height: 5svh;
         background-color: map-get($color, "blanco");
         border-bottom: 1px solid map-get($color, "gris_04");
         padding: 0 5vw;
@@ -31,7 +30,7 @@
     #contenido {
         grid-area: contenido;
         //height: 75svh;
-        background-color: chocolate;
+        //background-color: chocolate;
     }
 
     #pie {
@@ -154,8 +153,7 @@
     #contenido {
 
         .contenido__carrousel {
-            //@include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: center, $flx_bx_gap: 0);
-            height: 87svh;
+            height: 83svh;
             background-color: #000;
             background-image: url(../img/fondo_cabecera_buho.jpg);
             background-size: cover;
@@ -163,20 +161,13 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             overflow: hidden;
-            padding: 7svh 5vw 0;
-            //position: relative;
+            padding: 5svh 5vw 0;
 
             .contenido__carrousel--slider {
                 @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: center, $flx_bx_gap: 0);
-                //position: relative;
                 width: 285vw;
-                //width: 300%;
                 height: 76svh;
-                //margin: 25% 0 0;
-                //overflow: hidden;
-                //background-color: chartreuse;
                 transition: .5s ease all;
-                //transform: translateX(0%);
 
                 .carrousel__slider--slide {
                     display: inline-block;
@@ -195,14 +186,9 @@
                     p {
                         font-family: $fam_02;
                         font-size: 5svh;
-                        //font-size-adjust: 5svh;
-                        //font-size: 3rem;
-                        //line-height: 33px;
                         text-shadow: 2px 2px map-get($color, "negro");
                         color: map-get($color, "gris_16");
-                        max-height: 58svh;
-                        
-                        
+                        max-height: 58svh;  
                     }
 
                     &:nth-child(1) {
@@ -225,65 +211,22 @@
 
                 }
 
-                
-
-                /*
-                .carrousel__slider--slide {
-                    display: inline-block;
-                    width: 100%;
-
-                    div {
-
-                        h2 {
-                            font-family: $fam_01;
-                            margin-bottom: 7px;
-                            font-size: 4.5rem;
-                            text-shadow: 2px 2px map-get($color, "negro"); 
-                        }
-
-                        p {
-                            font-family: $fam_02;
-                            font-size: 2rem;
-                            text-shadow: 2px 2px map-get($color, "negro");
-                            color: map-get($color, "gris_16");
-                        }
-                    }
-
-                    &:nth-child(1) {
-                        h2 {
-                            color: map-get($color, "naranja_02");
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        h2 {
-                            color: map-get($color, "verde_02");
-                        }
-                    }
-
-                    &:nth-child(3) {
-                        h2 {
-                            color: map-get($color, "celeste_01");
-                        }
-                    }
-                }
-                */
             }
 
-            // .contenido__carrousel--slider.primero {
-            //     transform: translateX(0%);
-            //     transition: .1s ease all;
-            // }
+        }
 
-            // .contenido__carrousel--slider.segundo {
-            //     transform: translateX(-33.33%);
-            //     transition: .1s ease all;
-            // }
+        .contenido__nosotros {
+            padding: 0 5vw 5svh;
 
-            // .contenido__carrousel--slider.tercero {
-            //     transform: translateX(-66.66%);
-            //     transition: .1s ease all;
-            // }
+            h2 {
+                font-family: $fam_01;
+                text-align: center;
+                font-size: 3.5rem;
+                height: 3.5rem;
+                line-height: 1.1;
+                color: map-get($color, "gris_01");
+                margin-top: 3vw;
+            }
         }
 
     }

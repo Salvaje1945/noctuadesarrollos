@@ -164,7 +164,6 @@ a {
 }
 #contenedor #contenido {
   grid-area: contenido;
-  background-color: chocolate;
 }
 #contenedor #pie {
   grid-area: pie;
@@ -268,7 +267,7 @@ a {
   transition: 0.3s ease all;
 }
 #contenedor #contenido .contenido__carrousel {
-  height: 87svh;
+  height: 83svh;
   background-color: #000;
   background-image: url(../img/fondo_cabecera_buho.jpg);
   background-size: cover;
@@ -276,7 +275,7 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
-  padding: 7svh 5vw 0;
+  padding: 5svh 5vw 0;
 }
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider {
   display: flex;
@@ -287,47 +286,6 @@ a {
   width: 285vw;
   height: 76svh;
   transition: 0.5s ease all;
-  /*
-  .carrousel__slider--slide {
-      display: inline-block;
-      width: 100%;
-
-      div {
-
-          h2 {
-              font-family: $fam_01;
-              margin-bottom: 7px;
-              font-size: 4.5rem;
-              text-shadow: 2px 2px map-get($color, "negro"); 
-          }
-
-          p {
-              font-family: $fam_02;
-              font-size: 2rem;
-              text-shadow: 2px 2px map-get($color, "negro");
-              color: map-get($color, "gris_16");
-          }
-      }
-
-      &:nth-child(1) {
-          h2 {
-              color: map-get($color, "naranja_02");
-          }
-      }
-
-      &:nth-child(2) {
-          h2 {
-              color: map-get($color, "verde_02");
-          }
-      }
-
-      &:nth-child(3) {
-          h2 {
-              color: map-get($color, "celeste_01");
-          }
-      }
-  }
-  */
 }
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider .carrousel__slider--slide {
   display: inline-block;
@@ -357,6 +315,18 @@ a {
 }
 #contenedor #contenido .contenido__carrousel .contenido__carrousel--slider .carrousel__slider--slide:nth-child(3) h2 {
   color: #4cb5f5;
+}
+#contenedor #contenido .contenido__nosotros {
+  padding: 0 5vw 5svh;
+}
+#contenedor #contenido .contenido__nosotros h2 {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  font-size: 3.5rem;
+  height: 3.5rem;
+  line-height: 1.1;
+  color: #333;
+  margin-top: 3vw;
 }
 
 @media only screen and (min-width: 768px) {
