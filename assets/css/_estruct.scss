@@ -199,7 +199,7 @@
                     p {
                         font-family: $fam_02;
                         font-size: 2rem;
-                        line-height: 39px;
+                        //line-height: 33px;
                         text-shadow: 2px 2px map-get($color, "negro");
                         color: map-get($color, "gris_16");
                     }
