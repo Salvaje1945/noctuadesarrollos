@@ -30,7 +30,7 @@
 
     #contenido {
         grid-area: contenido;
-        height: 75svh;
+        //height: 75svh;
         background-color: chocolate;
     }
 
@@ -45,77 +45,131 @@
 
     #cabecera {
 
-        .cabecera__contenido--menu {
-            display: block;
-            position: fixed;
-            width: 100vw;
-            height: 95svh;
-            background-color: #000;
-            top: 5svh;
-            left: -100%;
-            transition: .5s ease all;
+        // .cabecera__desplegable--menu {
+        //     position: fixed;
+        //     width: 100vw;
+        //     height: 95svh;
+        //     background-color: #000;
+        //     top: 5svh;
+        //     left: -150%;
+        //     transition: .5s ease all;
 
-            ul {
-                list-style: none;
-                display: block;
-                width: 100%;
-                padding: 0 5vw;
-                margin: 3svh 0 0;
+        //     ul {
+        //         list-style: none;
+        //         display: block;
+        //         width: 100%;
+        //         padding: 0 5vw;
+        //         margin: 3svh 0 0;
 
-                li {
+        //         li {
+        //             display: block;
+        //             padding: 3svh 0;
+        //             text-align: center;
+        //             font-family: $fam_03;
+        //             color: map-get($color, "blanco");
+        //             font-size: 1.5rem;
+        //             font-weight: 500;
+
+        //             a {
+        //                 //color: map-get($color, "blanco");
+        //                 text-transform: uppercase;
+
+        //                 &:hover {
+        //                     color: map-get($color, "gris_09");
+        //                 }
+        //             }
+
+        //             div {
+        //                 @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-evenly, $flx_bx_gap: 0);
+
+        //                 span {
+        //                     color: map-get($color, "blanco");
+        //                     font-size: 2.5rem;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .cabecera__desplegable--menu.activo {
+        //     left: 0;
+        //     transition: .3s linear all;
+        // }
+        
+        .cabecera__contenido,
+        .cabecera__contenido--moviles {
+            @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0);
+            height: 5svh;
+        }
+
+        .cabecera__contenido {
+            display: none;
+        }
+
+        .cabecera__contenido--moviles {
+
+            .cabecera__desplegable--menu {
+                position: fixed;
+                width: 100vw;
+                height: 95svh;
+                background-color: #000;
+                top: 5svh;
+                left: -150%;
+                transition: .5s ease all;
+    
+                ul {
+                    list-style: none;
                     display: block;
-                    padding: 3svh 0;
-                    text-align: center;
-                    font-family: $fam_03;
-                    color: map-get($color, "blanco");
-                    font-size: 1.5rem;
-                    font-weight: 500;
-
-                    a {
+                    width: 100%;
+                    padding: 0 5vw;
+                    margin: 3svh 0 0;
+    
+                    li {
+                        display: block;
+                        padding: 3svh 0;
+                        text-align: center;
+                        font-family: $fam_03;
                         color: map-get($color, "blanco");
-                        text-transform: uppercase;
-
-                        &:hover {
-                            color: map-get($color, "gris_09");
+                        font-size: 1.5rem;
+                        font-weight: 500;
+    
+                        a {
+                            //color: map-get($color, "blanco");
+                            text-transform: uppercase;
+    
+                            &:hover {
+                                color: map-get($color, "gris_09");
+                            }
                         }
-                    }
-
-                    div {
-                        display: flex;
-                        flex-flow: row nowrap;
-                        align-items: center;
-                        justify-content: space-evenly;
-
-                        span {
-                            color: map-get($color, "blanco");
-                            font-size: 2.5rem;
+    
+                        div {
+                            @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-evenly, $flx_bx_gap: 0);
+    
+                            span {
+                                color: map-get($color, "blanco");
+                                font-size: 2.5rem;
+                            }
                         }
                     }
                 }
             }
-        }
+    
+            .cabecera__desplegable--menu.activo {
+                left: 0;
+                transition: .3s linear all;
+            }
 
-        .cabecera__contenido--menu.activo {
-            left: 0;
-            transition: .3s linear all;
-        }
-        
-        .cabecera__contenido {
-            @extend .flex-1;
-            height: 5svh;
+            .cabecera__moviles--logo {
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: flex-start, $flx_bx_gap: 7px);
 
-            .cabecera__contenido--logo {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-
-                img {
+                img,
+                .cabecera__moviles--titulo {
                     display: inline-block;
-                    margin: 0 7px 0 0;
+                    //margin: 0 7px 0 0;
                 }
 
-                .cabecera__contenido--titulo {
-                    display: inline-block;
+                .cabecera__moviles--titulo {
+                    //display: inline-block;
                     height: 24px;
 
                     h1 {
@@ -135,7 +189,7 @@
                 }
             }
 
-            .cabecera__contenido--btn {
+            .cabecera__moviles--btn {
                 display: none;
                 font-size: 1.5rem;
                 color: map-get($color, "negro");
@@ -143,12 +197,28 @@
                 transition: .3s linear all;
             }
 
-            .cabecera__contenido--btn.activo {
+            .cabecera__moviles--btn.activo {
                 display: inline-block;
                 transition: .3s ease all;
             }
 
+
         }
 
     }
+
+    #contenido {
+
+        .contenido__carrousel {
+            min-height: 614px;
+            background-color: #000;
+            background-image: url(../img/fondo_cabecera_buho.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+    }
+
 }
