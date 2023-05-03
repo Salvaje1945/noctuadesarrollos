@@ -23,7 +23,11 @@ function carrouselContenido() {
 
     const tarjetas = document.querySelectorAll('.carrousel__slider--slide')
 
-    const anchoTarjetas = tarjetas[0].clientWidth
+    const anchoTarjetasPx = tarjetas[0].clientWidth
+
+    const anchoTarjetas = (anchoTarjetasPx * 100) / 1068
+
+    console.log(anchoTarjetas)
 
     function tarjetasMovimiento() {
 
@@ -33,7 +37,7 @@ function carrouselContenido() {
             indice = 0
         }
 
-        $('#carrousel-slider').style.transform = "translateX(-" + indice * anchoTarjetas + "px)"
+        $('#carrousel-slider').style.transform = "translateX(-" + indice * anchoTarjetas + "%)"
 
         /*
 
