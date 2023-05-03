@@ -23,16 +23,6 @@ function carrouselContenido() {
 
     const tarjetas = document.querySelectorAll('.carrousel__slider--slide')
 
-    const anchoContenedor = $('#carrousel-slider').clientWidth
-
-    console.log($('#carrousel-slider').clientWidth)
-
-    const anchoTarjetasPx = tarjetas[0].clientWidth
-
-    const anchoTarjetas = (anchoTarjetasPx * 100) / anchoContenedor
-
-    console.log(anchoTarjetas)
-
     function tarjetasMovimiento() {
 
         indice += 1
@@ -42,40 +32,6 @@ function carrouselContenido() {
         }
 
         $('#carrousel-slider').style.transform = "translateX(-" + indice * 33.33 + "%)"
-
-        //$('#carrousel-slider').style.transform = "translateX(-" + indice * anchoTarjetas + "%)"
-
-        /*
-
-        let posicion = indice * anchoTarjetas
-
-        if(posicion === 0){
-            if($('#carrousel-slider').classList.contains('segundo')){
-                $('#carrousel-slider').classList.replace('segundo', 'primero')
-            }
-            if($('#carrousel-slider').classList.contains('tercero')){
-                $('#carrousel-slider').classList.replace('tercero', 'primero')
-            }
-        }
-
-        if(posicion === 1){
-            if($('#carrousel-slider').classList.contains('primero')){
-                $('#carrousel-slider').classList.replace('primero', 'segundo')
-            }
-            if($('#carrousel-slider').classList.contains('tercero')){
-                $('#carrousel-slider').classList.replace('tercero', 'segundo')
-            }
-        }
-
-        if(posicion === 2){
-            if($('#carrousel-slider').classList.contains('segundo')){
-                $('#carrousel-slider').classList.replace('segundo', 'tercer')
-            }
-            if($('#carrousel-slider').classList.contains('tercero')){
-                $('#carrousel-slider').classList.replace('tercero', 'primero')
-            }
-        }
-        */
 
     }
 
