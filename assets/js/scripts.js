@@ -23,9 +23,13 @@ function carrouselContenido() {
 
     const tarjetas = document.querySelectorAll('.carrousel__slider--slide')
 
+    const anchoContenedor = $('#carrousel-slider').clientWidth
+
+    console.log($('#carrousel-slider').clientWidth)
+
     const anchoTarjetasPx = tarjetas[0].clientWidth
 
-    const anchoTarjetas = (anchoTarjetasPx * 100) / 1068
+    const anchoTarjetas = (anchoTarjetasPx * 100) / anchoContenedor
 
     console.log(anchoTarjetas)
 
