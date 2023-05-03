@@ -41,7 +41,9 @@ function carrouselContenido() {
             indice = 0
         }
 
-        $('#carrousel-slider').style.transform = "translateX(-" + indice * anchoTarjetas + "%)"
+        $('#carrousel-slider').style.transform = "translateX(-" + indice * 33.33 + "%)"
+
+        //$('#carrousel-slider').style.transform = "translateX(-" + indice * anchoTarjetas + "%)"
 
         /*
 
