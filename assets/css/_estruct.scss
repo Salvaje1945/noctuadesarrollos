@@ -42,6 +42,35 @@
 
 #contenedor {
 
+    .contenedor__subir {
+        @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+        position: fixed;
+        width: 38px;
+        height: 38px;
+        border-radius: 7px;
+        border: 1px solid map-get($color, "gris_01");
+        background-color: map-get($color, "gris_12");
+        bottom: 2.65svh;
+        right: -100%;
+        padding: 3.65px 0.5px 0 0;
+        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
+        transition: .3s ease all;
+
+        div {
+            display: inline-block;
+            font-size: 1.75rem;
+            color: map-get($color, "gris_01");
+            line-height: 5px !important;
+
+            
+        }
+    }
+
+    .contenedor__subir.activo {
+        right: 5vw;
+        transition: .3s linear all;
+    }
+
     #cabecera {
         
         .cabecera__contenido,
@@ -216,7 +245,9 @@
         }
 
         .contenido__nosotros {
-            padding: 0 5vw 5svh;
+            //padding: 2.5svh 5vw 5svh;
+            padding: 2.5svh 5vw 5svh;
+            margin: 1px 0 0;
 
             h2 {
                 font-family: $fam_01;
@@ -225,7 +256,7 @@
                 height: 3.5rem;
                 line-height: 1.1;
                 color: map-get($color, "gris_01");
-                margin-top: 1.59svh;
+                //margin-top: 2.5svh;
             }
         }
 
