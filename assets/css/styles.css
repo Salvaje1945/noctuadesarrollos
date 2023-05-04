@@ -374,25 +374,11 @@ a {
   color: #333;
 }
 
-/*
-
-@media only screen and (min-width: map-get($wth_res, "tbl_01")) {
-
-    #contenedor {
-
-        #cabecera {
-
-            .cabecera__contenido {
-                display: flex;
-            }
-
-            .cabecera__contenido--moviles {
-                display: none;
-            }
-        }
-    }
-
-
-}
-
-*//*# sourceMappingURL=styles.css.map */
+@media only screen and (min-width: 768px) {
+  #contenedor #cabecera .cabecera__contenido {
+    display: flex;
+  }
+  #contenedor #cabecera .cabecera__contenido--moviles {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
