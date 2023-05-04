@@ -438,6 +438,9 @@ a {
     padding: 1svh 0 5svh;
     margin: 1px 0 0;
   }
+  #contenedor #contenido .contenido__nosotros h2 {
+    margin: 0 0 1svh;
+  }
 }
 @media only screen and (min-width: 768px) {
   #contenedor #cabecera .cabecera__contenido {
