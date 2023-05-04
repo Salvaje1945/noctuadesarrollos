@@ -121,6 +121,18 @@
   src: url(../fonts/Urbanist-Regular.woff) format("woff");
   font-display: auto;
 }
+/*
+@font-face {
+    font-family: 'Staatliches';
+    src: url(../fonts/Staatliches-Regular.woff) format('woff');
+    font-display: auto;
+}
+*/
+@font-face {
+  font-family: "Koulen";
+  src: url(../fonts/Koulen-Regular.woff) format("woff");
+  font-display: auto;
+}
 html,
 :root {
   font-size: 16px !important;
@@ -363,7 +375,7 @@ a {
   color: #4cb5f5;
 }
 #contenedor #contenido .contenido__nosotros {
-  padding: 2svh 5vw 5svh;
+  padding: 2svh 0 5svh;
   margin: 1px 0 0;
 }
 #contenedor #contenido .contenido__nosotros h2 {
@@ -373,6 +385,52 @@ a {
   height: 3.5rem;
   line-height: 1.1;
   color: #333;
+  margin: 0 0 2svh;
+}
+#contenedor #contenido .contenido__nosotros .contenido__nosotros--cont {
+  background-color: chartreuse;
+}
+#contenedor #contenido .contenido__nosotros .contenido__nosotros--cont p {
+  display: inline-block;
+}
+#contenedor #contenido .contenido__nosotros .contenido__nosotros--cont .nosotros__cont--cabecera {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+  height: 45vw;
+  width: 100vw;
+  background-color: #000;
+  background-image: url(../img/fondo_cabecera_nosotros.jpg);
+  background-size: contain;
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  margin-bottom: 3svh;
+}
+#contenedor #contenido .contenido__nosotros .contenido__nosotros--cont .nosotros__cont--cabecera h3 {
+  display: inline-block;
+  font-family: "Koulen", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  left: -100%;
+}
+#contenedor #contenido .contenido__nosotros .contenido__nosotros--cont .nosotros__cont--contenido {
+  display: block;
+  background-color: chocolate;
+  border-radius: 11px;
+  margin: 0 5vw 3svh;
+  padding: 11px;
+  text-align: left;
+}
+#contenedor #contenido .contenido__nosotros .contenido__nosotros--cont .nosotros__cont--contenido p {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1rem;
+  color: #fff;
 }
 
 @media only screen and (max-height: 665px) {

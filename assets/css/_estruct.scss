@@ -246,8 +246,7 @@
         }
 
         .contenido__nosotros {
-            //padding: 2.5svh 5vw 5svh;
-            padding: 2svh 5vw 5svh;
+            padding: 2svh 0 5svh;
             margin: 1px 0 0;
 
             h2 {
@@ -257,8 +256,60 @@
                 height: 3.5rem;
                 line-height: 1.1;
                 color: map-get($color, "gris_01");
-                //margin-top: 2.5svh;
+                margin: 0 0 2svh;
             }
+
+            .contenido__nosotros--cont {
+                //@include caja__flexible--edit ($flx_bx_ff: row wrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-between, $flx_bx_gap: 0);
+                //padding: 0 5vw;
+                background-color: chartreuse;
+
+                p {
+                    display: inline-block;
+                }
+                
+                .nosotros__cont--cabecera {
+                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+                    height: 45vw;
+                    width: 100vw;
+                    background-color: #000;
+                    background-image: url(../img/fondo_cabecera_nosotros.jpg);
+                    background-size: contain;
+                    background-position: center 15%;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    position: relative;
+                    margin-bottom: 3svh;
+                    
+
+                    h3 {
+                        display: inline-block;
+                        font-family: $fam_05;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: map-get($color, "blanco");
+                        position: absolute;
+                        left: -100%;
+                    }
+                }
+
+                .nosotros__cont--contenido {
+                    display: block;
+                    background-color: chocolate;
+                    border-radius: 11px;
+                    margin: 0 5vw 3svh;
+                    padding: 11px;
+                    text-align: left;
+
+                    p {
+                        font-family: $fam_03;
+                        font-size: 1rem;
+                        color: map-get($color, "blanco");
+                    }
+                }
+                
+            }
+
         }
 
     }

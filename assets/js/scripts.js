@@ -15,7 +15,7 @@ function cambioDeTamanio() {
     console.log("El ancho del viewport es: " + anchoDePantalla)
 }
   
-window.addEventListener("resize", cambioDeTamanio)
+window.addEventListener('resize', cambioDeTamanio)
   
 const anchoDePantalla = dameElAnchoDePantalla()
 console.log("El ancho del viewport es: " + anchoDePantalla)
@@ -74,3 +74,44 @@ function carrouselContenido() {
 }
 
 carrouselContenido()
+
+window.addEventListener('scroll', function() {
+
+    function animacionNosotros() {
+
+        const alturaCabecera = $('#cabecera').offsetHeight
+
+        const alturaCarrousel = $('#contenido-carrousel-contenedor').offsetHeight
+
+        const sumaAlturaCabezaMasCarrusel = alturaCabecera + alturaCarrousel + 1
+
+        console.log('Altura de la CABECERA: ' + alturaCabecera)
+        console.log('Altura del contenedor del CARROUSEL: ' + alturaCarrousel)
+        console.log('Suma de altura de CABECERA y CARROUSEL: ' + sumaAlturaCabezaMasCarrusel)
+
+        let scrollActual = window.pageYOffset || document.documentElement.scrollTop
+        console.log('Valor "scrollActual": ' + scrollActual)
+
+        let porcentajeScroll = (scrollActual * 100) / sumaAlturaCabezaMasCarrusel
+
+        let posicionTitulo = porcentajeScroll - 100
+        
+        console.log('Porcentaje de ubicación ideal altura recorrido por el scroll: ' + porcentajeScroll)
+
+        console.log('La posición del título: ' + posicionTitulo)
+
+        $('#nosotros-cabecera-titulo').style.left= posicionTitulo + "%"
+
+        if(scrollActual >= sumaAlturaCabezaMasCarrusel) {
+            $('#nosotros-cabecera-titulo').style.left = 'auto'
+        }
+
+        // let posicionContenido = $('#nosotros-cabecera-contenido').getBoundingClientRect().top
+
+        // console.log('La posición del contenido: ' + posicionContenido)
+        
+    }
+
+    animacionNosotros()
+
+})

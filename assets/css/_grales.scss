@@ -26,6 +26,20 @@
     font-display: auto;
 }
 
+/*
+@font-face {
+    font-family: 'Staatliches';
+    src: url(../fonts/Staatliches-Regular.woff) format('woff');
+    font-display: auto;
+}
+*/
+
+@font-face {
+    font-family: 'Koulen';
+    src: url(../fonts/Koulen-Regular.woff) format('woff');
+    font-display: auto;
+}
+
 html,
 :root {
     font-size: $root_fsize;
