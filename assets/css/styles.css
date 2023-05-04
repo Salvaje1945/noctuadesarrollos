@@ -375,6 +375,12 @@ a {
   color: #333;
 }
 
+@media only screen and (max-height: 665px) {
+  #contenedor #contenido .contenido__nosotros {
+    padding: 1.75svh 5vw 5svh;
+    margin: 1px 0 0;
+  }
+}
 @media only screen and (min-width: 768px) {
   #contenedor #cabecera .cabecera__contenido {
     display: flex;

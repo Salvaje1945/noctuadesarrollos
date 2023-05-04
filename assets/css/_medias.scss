@@ -1,6 +1,22 @@
 @use 'vars' as *;
 @use 'predef' as *;
 
+@media only screen and (max-height: map-get($hgt_res, "bkp_06")) {
+
+    #contenedor {
+
+        #contenido {
+    
+            .contenido__nosotros {
+                padding: 1.75svh 5vw 5svh;
+                margin: 1px 0 0;
+            }
+    
+        }
+    }
+
+
+}
 
 @media only screen and (min-width: map-get($wth_res, "tbl_01")) {
 
