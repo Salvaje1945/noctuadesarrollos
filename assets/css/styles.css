@@ -224,6 +224,7 @@ a {
   justify-content: space-between;
   gap: 0;
   height: 5svh;
+  min-height: 35.3px;
 }
 #contenedor #cabecera .cabecera__contenido {
   display: none;

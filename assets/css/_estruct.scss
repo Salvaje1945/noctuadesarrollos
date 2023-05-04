@@ -77,6 +77,7 @@
         .cabecera__contenido--moviles {
             @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0);
             height: 5svh;
+            min-height: 35.3px;
         }
 
         .cabecera__contenido {
