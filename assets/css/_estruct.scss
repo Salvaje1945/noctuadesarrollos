@@ -55,6 +55,7 @@
         padding: 3.65px 0.5px 0 0;
         box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
         transition: .3s ease all;
+        z-index: 999;
 
         div {
             display: inline-block;
@@ -190,8 +191,9 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            overflow: hidden;
+            overflow-x: hidden;
             padding: 5svh 5vw 0;
+            //margin: 0 0 1px;
 
             .contenido__carrousel--slider {
                 @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: center, $flx_bx_gap: 0);
@@ -264,10 +266,6 @@
                 //padding: 0 5vw;
                 background-color: chartreuse;
 
-                p {
-                    display: inline-block;
-                }
-                
                 .nosotros__cont--cabecera {
                     @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
                     height: 45vw;
@@ -280,7 +278,6 @@
                     background-attachment: fixed;
                     position: relative;
                     margin-bottom: 3svh;
-                    
 
                     h3 {
                         display: inline-block;
@@ -293,22 +290,90 @@
                     }
                 }
 
-                .nosotros__cont--contenido {
-                    display: block;
-                    background-color: chocolate;
-                    border-radius: 11px;
-                    margin: 0 5vw 3svh;
-                    padding: 11px;
-                    text-align: left;
+                .nosotros__cont--cabecera.fijo {
+                    background-attachment:scroll;
+                }
+
+                .nosotros__cont--texto {
+                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+                    margin-bottom: 3svh;
+                    width: 100vw;
+                    overflow-x: hidden;
 
                     p {
                         font-family: $fam_03;
                         font-size: 1rem;
                         color: map-get($color, "blanco");
+                        display: inline-block;
+                        background-color: chocolate;
+                        border-radius: 11px;
+                        width: 90vw;
+                        padding: 11px;
+                        text-align: left;
+                        position: relative;
+                        right: -100%;
+                    }
+
+                }
+            }
+
+            /*
+            #nosotros-cabecera {
+
+                .nosotros__cont--cabecera {
+                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+                    height: 45vw;
+                    width: 100vw;
+                    background-color: #000;
+                    background-image: url(../img/fondo_cabecera_nosotros.jpg);
+                    background-size: contain;
+                    background-position: center 15%;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    position: relative;
+                    margin-bottom: 3svh;
+
+                    h3 {
+                        display: inline-block;
+                        font-family: $fam_05;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: map-get($color, "blanco");
+                        position: absolute;
+                        left: -100%;
                     }
                 }
-                
+
+                .nosotros__cont--cabecera.fijo {
+                    background-attachment:scroll;
+                }
+
             }
+
+            #nosotros-texto {
+                .nosotros__cont--texto {
+                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+                    margin-bottom: 3svh;
+                    width: 100vw;
+                    overflow-x: hidden;
+
+                    p {
+                        font-family: $fam_03;
+                        font-size: 1rem;
+                        color: map-get($color, "blanco");
+                        display: inline-block;
+                        background-color: chocolate;
+                        border-radius: 11px;
+                        width: 90vw;
+                        padding: 11px;
+                        text-align: left;
+                        position: relative;
+                        right: -100%;
+                    }
+
+                }
+            }
+            */
 
         }
 
