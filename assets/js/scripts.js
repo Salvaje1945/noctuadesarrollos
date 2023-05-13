@@ -11,34 +11,67 @@ function dameElAnchoDePantalla() {
 }
 
 function dameElAltoDePantalla() {
-    // return Math.max(
-    //     document.documentElement.clientHeight,
-    //     window.innerHeight || 0,
-    //     document.body.clientHeight || 0
-    // )
-    return window.screen.height;
+    return window.screen.height
 }
-  
-function cambioDeTamanio() {
-    const anchoDePantalla = dameElAnchoDePantalla()
-    const altoDePantalla = dameElAltoDePantalla()
-    console.log("El ancho del viewport es: " + anchoDePantalla)
-    console.log("El alto del viewport es: " + altoDePantalla)
-}
-  
-window.addEventListener('resize', cambioDeTamanio)
-  
-const anchoDePantalla = dameElAnchoDePantalla()
-console.log("El ancho del viewport es: " + anchoDePantalla)
-const altoDePantalla = dameElAltoDePantalla()
-console.log("El alto del viewport es: " + altoDePantalla)
 
-// function getScreenHeight() {
-//     return window.screen.height;
-// }
-  
-// const screenHeight = getScreenHeight();
-// console.log("La altura de la pantalla es: " + screenHeight);
+
+
+function animacionNosotros(elAncho) {
+    
+    const alturaCabecera = $('#cabecera').offsetHeight
+
+    const alturaCarrousel = $('#contenido-carrousel-contenedor').offsetHeight
+
+    const sumaAlturaCabezaMasCarrusel = alturaCabecera + alturaCarrousel
+
+    const anchoEjecusion = elAncho
+
+    function ejecutarAnimacion() {
+        window.addEventListener('scroll', function () {
+
+            let scrollActual = window.pageYOffset || document.documentElement.scrollTop
+    
+            let porcentajeScroll = (scrollActual * 100) / sumaAlturaCabezaMasCarrusel
+    
+            let posicionElemento = porcentajeScroll - 100
+    
+            $('#nosotros-cabecera-titulo').style.left = posicionElemento + "%"
+    
+            $('#nosotros-contenido-texto').style.right = posicionElemento + "%"
+    
+            if (scrollActual >= sumaAlturaCabezaMasCarrusel) {
+                $('#nosotros-cabecera-titulo').style.left = 'auto'
+                $('#nosotros-contenido-texto').style.right = 'auto'
+                $('#nosotros-cabecera-box').classList.add('fijo')
+            }
+    
+            if (scrollActual <= sumaAlturaCabezaMasCarrusel) {
+                $('#nosotros-cabecera-box').classList.remove('fijo')
+            }
+    
+        })
+    }
+
+    if(anchoEjecusion < 768){
+        ejecutarAnimacion()
+    } else {
+        return
+    }
+
+}
+
+//animacionNosotros()
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    const anchoDePantallaInicial = dameElAnchoDePantalla()
+    animacionNosotros(anchoDePantallaInicial)
+})
+
+window.addEventListener('resize', ()=> {
+    const anchoDePantalla = dameElAnchoDePantalla()
+    animacionNosotros(anchoDePantalla)
+    
+})
 
 function cabeceraAbrirMenu() {
     $('#cabecera-menu-abrir').classList.remove('activo')
@@ -94,58 +127,3 @@ function carrouselContenido() {
 }
 
 carrouselContenido()
-
-window.addEventListener('scroll', function() {
-
-    function animacionNosotros() {
-
-        const alturaCabecera = $('#cabecera').offsetHeight
-
-        const alturaCarrousel = $('#contenido-carrousel-contenedor').offsetHeight
-
-        const sumaAlturaCabezaMasCarrusel = alturaCabecera + alturaCarrousel
-
-        console.log('Altura de la CABECERA: ' + alturaCabecera)
-        console.log('Altura del contenedor del CARROUSEL: ' + alturaCarrousel)
-        console.log('Suma de altura de CABECERA y CARROUSEL: ' + sumaAlturaCabezaMasCarrusel)
-
-        let scrollActual = window.pageYOffset || document.documentElement.scrollTop
-        console.log('Valor "scrollActual": ' + scrollActual)
-
-        let porcentajeScroll = (scrollActual * 100) / sumaAlturaCabezaMasCarrusel
-
-        let posicionElemento = porcentajeScroll - 100
-        
-        console.log('Porcentaje de ubicación ideal altura recorrido por el scroll: ' + porcentajeScroll)
-
-        console.log('La posición del título: ' + posicionElemento)
-
-        $('#nosotros-cabecera-titulo').style.left= posicionElemento + "%"
-
-        $('#nosotros-contenido-texto').style.right= posicionElemento + "%"
-
-        if(scrollActual >= sumaAlturaCabezaMasCarrusel) {
-            $('#nosotros-cabecera-titulo').style.left = 'auto'
-            $('#nosotros-contenido-texto').style.right = 'auto'
-            $('#nosotros-cabecera-box').classList.add('fijo')
-
-            // if(scrollActual <= sumaAlturaCabezaMasCarrusel) {
-            //     $('#nosotros-cabecera-box').classList.remove('fijo')
-            // }
-        }
-
-        if(scrollActual <= sumaAlturaCabezaMasCarrusel) {
-            $('#nosotros-cabecera-box').classList.remove('fijo')
-        }
-
-
-
-        // let posicionContenido = $('#nosotros-cabecera-contenido').getBoundingClientRect().top
-
-        // console.log('La posición del contenido: ' + posicionContenido)
-        
-    }
-
-    animacionNosotros()
-
-})

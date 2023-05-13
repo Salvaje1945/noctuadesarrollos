@@ -24,13 +24,11 @@
         grid-area: cabecera;
         background-color: map-get($color, "blanco");
         border-bottom: 1px solid map-get($color, "gris_04");
-        padding: 0 5vw;
+        padding: 0 5%;
     }
 
     #contenido {
         grid-area: contenido;
-        //height: 75svh;
-        //background-color: chocolate;
     }
 
     #pie {
@@ -62,13 +60,11 @@
             font-size: 1.75rem;
             color: map-get($color, "gris_01");
             line-height: 5px !important;
-
-            
         }
     }
 
     .contenedor__subir.activo {
-        right: 5vw;
+        right: 5%;
         transition: .3s linear all;
     }
 
@@ -81,15 +77,11 @@
             min-height: 35.3px;
         }
 
-        .cabecera__contenido {
-            display: none;
-        }
-
         .cabecera__contenido--moviles {
 
             .cabecera__desplegable--menu {
                 position: fixed;
-                width: 100vw;
+                width: 100%;
                 height: 95svh;
                 background-color: #000;
                 top: 5svh;
@@ -101,7 +93,7 @@
                     list-style: none;
                     display: block;
                     width: 100%;
-                    padding: 0 5vw;
+                    padding: 0 5%;
                     margin: 3svh 0 0;
     
                     li {
@@ -179,6 +171,67 @@
 
         }
 
+        .cabecera__contenido {
+
+            .cabecera__contenido--logo {
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: flex-start, $flx_bx_gap: 7px);
+
+                img,
+                .cabecera__logo--titulo {
+                    display: inline-block;
+                }
+
+                .cabecera__logo--titulo {
+                    height: 24px;
+
+                    h1 {
+                        font-family: $fam_02;
+                        font-size: 1.5rem;
+                        color: map-get($color, "negro");
+                        margin: 0;
+                        padding: 0;
+                        line-height: 24px;
+    
+                        span {
+                            font-family: $fam_01;
+                        }
+                    }
+                }
+            }
+
+            .cabecera__contenido--menu {
+                display: inline-block;
+
+                ul {
+                    list-style: none;
+                    display: inline-block;
+                    width: 100%;
+                    padding: 0 5%;
+    
+                    li {
+                        display: inline-block;
+                        padding: 0 11px;
+                        text-align: left;
+                        font-family: $fam_03;
+                        color: map-get($color, "negro");
+                        font-size: 1rem;
+                        font-weight: 500;
+    
+                        a {
+    
+                            &:hover {
+                                color: map-get($color, "rojo_05");
+                            }
+    
+                        }
+    
+                    }
+                }
+
+            }
+
+        }
+
     }
 
     #contenido {
@@ -192,7 +245,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             overflow-x: hidden;
-            padding: 5svh 5vw 0;
+            padding: 5svh 5% 0;
             //margin: 0 0 1px;
 
             .contenido__carrousel--slider {
@@ -269,14 +322,12 @@
                 .nosotros__cont--cabecera {
                     @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
                     height: 45vw;
-                    width: 100vw;
                     background-color: #000;
                     background-image: url(../img/fondo_cabecera_nosotros.jpg);
                     background-size: contain;
                     background-position: center 15%;
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    position: relative;
                     margin-bottom: 3svh;
 
                     h3 {
@@ -285,19 +336,19 @@
                         font-size: 2rem;
                         font-weight: 600;
                         color: map-get($color, "blanco");
-                        position: absolute;
+                        position: relative;
                         left: -100%;
+                        width: auto;
                     }
                 }
 
                 .nosotros__cont--cabecera.fijo {
-                    background-attachment:scroll;
+                    background-attachment: scroll;
                 }
 
                 .nosotros__cont--texto {
                     @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-around, $flx_bx_gap: 0);
                     margin-bottom: 3svh;
-                    width: 100vw;
                     overflow-x: hidden;
 
                     p {
@@ -307,7 +358,7 @@
                         display: inline-block;
                         background-color: chocolate;
                         border-radius: 11px;
-                        width: 90vw;
+                        width: 90%;
                         padding: 11px;
                         text-align: left;
                         position: relative;
@@ -316,64 +367,6 @@
 
                 }
             }
-
-            /*
-            #nosotros-cabecera {
-
-                .nosotros__cont--cabecera {
-                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
-                    height: 45vw;
-                    width: 100vw;
-                    background-color: #000;
-                    background-image: url(../img/fondo_cabecera_nosotros.jpg);
-                    background-size: contain;
-                    background-position: center 15%;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    position: relative;
-                    margin-bottom: 3svh;
-
-                    h3 {
-                        display: inline-block;
-                        font-family: $fam_05;
-                        font-size: 2rem;
-                        font-weight: 600;
-                        color: map-get($color, "blanco");
-                        position: absolute;
-                        left: -100%;
-                    }
-                }
-
-                .nosotros__cont--cabecera.fijo {
-                    background-attachment:scroll;
-                }
-
-            }
-
-            #nosotros-texto {
-                .nosotros__cont--texto {
-                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-around, $flx_bx_gap: 0);
-                    margin-bottom: 3svh;
-                    width: 100vw;
-                    overflow-x: hidden;
-
-                    p {
-                        font-family: $fam_03;
-                        font-size: 1rem;
-                        color: map-get($color, "blanco");
-                        display: inline-block;
-                        background-color: chocolate;
-                        border-radius: 11px;
-                        width: 90vw;
-                        padding: 11px;
-                        text-align: left;
-                        position: relative;
-                        right: -100%;
-                    }
-
-                }
-            }
-            */
 
         }
 
